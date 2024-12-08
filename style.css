@@ -38,10 +38,12 @@ button {
     align-items: center;
 }
 
-svg {
-    width: 20px;
-    height: 20px;
+#svg{
+   
     vertical-align: middle;
+    transform: rotate(180deg);
+    padding: 0;
+    margin: 0;
 }
 
 .first-row button {
