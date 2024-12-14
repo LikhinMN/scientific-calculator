@@ -3,49 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaquerries.css">
-    <title>calculator</title>
 </head>
 <body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=Hidesidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#basic">Basic</a></li>
+            <li><a href="#algebra">Algebra</a></li>
+            <li><a href="#trigonometric">Trigonometric</a></li>
+            <li><a href="#calculus">Calculus</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#matrix">Matrix</a></li>
+            <li><a href="#math-symbols">Symbols</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li>
+                <a onclick=enableDarkMode() class="mode-toggle"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" class="light-mode-icon"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg></a>
+                <a onclick=enableLightMode() class="mode-toggle"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" class="dark-mode-icon"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg></a>
+            </li>
+        </ul>
+        <ul>
+            <li class="hide"><a href="#basic">Basic</a></li>
+            <li class="hide"><a href="#algebra">Algebra</a></li>
+            <li class="hide"><a href="#trigonometric">Trigonometric</a></li>
+            <li class="hide"><a href="#calculus">Calculus</a></li>
+            <li class="hide"><a href="#calculus">Calculus</a></li>
+            <li class="hide"><a href="#statistics">Statistics</a></li>
+            <li class="hide"><a href="#matrix">Matrix</a></li>
+            <li class="hide"><a href="#math-symbols">Symbols</a></li>
+            <li class="hide"><a href="#characters">Characters</a></li>
+            <li class="hide">
+                <a onclick=enableLightMode() class="mode-toggle"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" class="dark-mode-icon"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg></a>
+            </li>
+            <li class="hide">
+                <a onclick=enableDarkMode() class="mode-toggle"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" class="light-mode-icon"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg></a>
+            </li>
+            <li onclick=Showsidebar()>
+                <a>
+                <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
     <div class="calculator">
-        <H1>calculator</H1>
-        <input type="text" class="display">
-        <div class="button-container">
+        <h1>Calculator</h1>
+        <input type="text" placeholder="0" class="display">
+        <div class="calculator-container">
+            <section id="basic">
+                <div class="button-container">
+                    <button class="btn">AC</button>
+                    <button  class=" btn clear">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Delete-Tag--Streamline-Sharp.svg" height="24" width="24">
+                            <desc>Delete Tag Streamline Icon: https://streamlinehq.com</desc>
+                            <g id="delete-tag--delete-tag-remove-cross-x-button-mathematics-math">
+                                <path id="Subtract" fill="#000000" fill-rule="evenodd" d="M16.3929 4.89209H0.957886V19.108H16.3929L22.6445 12l-6.2516 -7.10791Zm-5.038 3.58342L9.24433 10.586 7.13381 8.47551 5.7196 9.88972l2.11052 2.11048 -2.11052 2.1106 1.41421 1.4142 2.11052 -2.1105 2.11057 2.1105 1.4142 -1.4142 -2.1106 -2.1106 2.1106 -2.11048 -1.4142 -1.41421Z" clip-rule="evenodd" stroke-width="1"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="btn">*</button>
+                    <button class="btn">7</button>
+                    <button class="btn">/</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
+                    <button class="btn">-</button>
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                    <button class="plus btn">+</button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">0</button>
+                    <button class="btn">.</button>
+                    <button class="btn">%</button>
+                    <button class="equal btn">=</button>
+                </div>
+            </section>
 
-            <div class="first-row">
-                <button value="AC">AC</button>
-                <button value="clear"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Delete-Tag--Streamline-Sharp.svg" height="24" width="24"><desc>Delete Tag Streamline Icon: https://streamlinehq.com</desc><g id="delete-tag--delete-tag-remove-cross-x-button-mathematics-math"><path id="Subtract" fill="#000000" fill-rule="evenodd" d="M16.3929 4.89209H0.957886V19.108H16.3929L22.6445 12l-6.2516 -7.10791Zm-5.038 3.58342L9.24433 10.586 7.13381 8.47551 5.7196 9.88972l2.11052 2.11048 -2.11052 2.1106 1.41421 1.4142 2.11052 -2.1105 2.11057 2.1105 1.4142 -1.4142 -2.1106 -2.1106 2.1106 -2.11048 -1.4142 -1.41421Z" clip-rule="evenodd" stroke-width="1"></path></g></svg></button>
-                <button value="/">/</button>
-                <button value="*">*</button> 
-            </div>
-            <div class="first-row">
-                <button value="7">7</button>
-                <button value="8">8</button>
-                <button value="9">9</button> 
-                <button value="-">-</button> 
+            <section id="algebra">
+                <div class="button-container">
+                    <button class="btn">&lt;</button>
+                    <button class="btn">&gt;</button>
+                    <button class="btn">≤</button>
+                    <button class="btn">≥</button>
+                    <button class="btn"><span class="placeholder">x</span><sup>Y</sup></button>
+                    <button class="btn"><span class="placeholder">x</span><sup>2</sup></button>
+                    <button class="btn"><span class="placeholder">x</span><sup>3</sup></button>
+                    <button class="btn">√<span class="placeholder">x</span></button>
+                    <button class="btn"><sup class="placeholder">y</sup>√<span class="placeholder">x</span></button>
+                    <button class="btn"><sup>3</sup>√<span class="placeholder">x</span></button>
+                    <button class="btn"><span class="fraction"><span class="placeholder">a</span><span class="fraction-divider">/</span><span class="placeholder">b</span></span></button>
+                    <button class="btn"><span class="fraction"><span class="placeholder">a</span><span class="fraction-divider">–</span><span class="placeholder">b</span></span></button>
+                    <button class="btn">log</button>
+                    <button class="btn">log<sub><span class="placeholder">a</span></sub></button>
+                    <button class="btn">ln</button>
+                    <button class="btn">n!</button>
+                </div>
+            </section>
 
-            </div>
-            <div class="first-row">
-                <button value="4">4</button>
-                <button value="5">5</button>
-                <button value="6">6</button>
-                <button value="+">+</button>
-              
-            </div>
-            <div class="first-row">
-                <button value="1">1</button>
-                <button value="2">2</button>
-                <button value="3">3</button>  
-            </div>
-            <div class="first-row">
-                <button value="0">0</button>
-                <button value=".">.</button>
-                <button value="%">%</button>  
-                <button value="=">=</button>  
-            </div>
-        </div> 
+            <section id="trigonometric">
+                <div class="button-container">
+                    <button class="btn">sin</button>
+                    <button class="btn">cos</button>
+                    <button class="btn">tan</button>
+                    <button class="btn">arcsin</button>
+                    <button class="btn">arccos</button>
+                    <button class="btn">arctan</button>
+                    <button class="btn">sinh</button>
+                    <button class="btn">cosh</button>
+                    <button class="btn">tanh</button>
+                    <button class="btn">arcsinh</button>
+                    <button class="btn">arccosh</button>
+                    <button class="btn">arctanh</button>
+                </div>
+            </section>
+
+            <section id="calculus">
+                <div class="button-container">
+                    <button aria-label="Partial Derivative">∂</button>
+                    <button aria-label="Derivative">d/dx</button>
+                    <button aria-label="Limit">lim</button>
+                    <button aria-label="Sine of x">sin(x)</button>
+                    <button aria-label="Cosine of x">cos(x)</button>
+                    <button aria-label="Tangent of x">tan(x)</button>
+                    <button aria-label="Partial Derivative with respect to x">∂/∂x</button>
+                    <button aria-label="Second Partial Derivative with respect to x">∂²/∂x²</button>
+                    <button aria-label="Higher Order Derivative">∂³/∂x³</button>
+                    <button aria-label="Total Derivative">d/dt</button>
+                    <button aria-label="Second Derivative with respect to t">d²/dt²</button>
+                    <button aria-label="Higher Order Derivative with respect to t">d³/dt³</button>
+                    <button aria-label="Derivative with respect to x and t">∂/∂x∂t</button>
+                    <button aria-label="Second Mixed Derivative">∂²/∂x∂t²</button>
+                </div>
+            </section>
+
+            <section id="statistics">
+                <div class="button-container">
+                    <button aria-label="Mean">mean</button>
+                    <button aria-label="Median">median</button>
+                    <button aria-label="Mode">mode</button>
+                    <button aria-label="Range">range</button>
+                    <button aria-label="Standard Deviation">standard deviation</button>
+                    <button aria-label="Variance">variance</button>
+                    <button aria-label="Percentile">percentile</button>
+                    <button aria-label="Quartiles">quartiles</button>
+                    <button aria-label="Interquartile Range">interquartile range</button>
+                    <button aria-label="Histogram">histogram</button>
+                    <button aria-label="Bar Chart">bar chart</button>
+                    <button aria-label="Pie Chart">pie chart</button>
+                    <button aria-label="Line Chart">line chart</button>
+                    <button aria-label="Scatter Plot">scatter plot</button>
+                    <button aria-label="Correlation Coefficient">correlation coefficient</button>
+                </div>
+            </section>
+
+            <section id="matrix">
+                <div class="button-container">
+                    <button aria-label="Matrix Addition">matrix addition</button>
+                    <button aria-label="Matrix Subtraction">matrix subtraction</button>
+                    <button aria-label="Matrix Multiplication">matrix multiplication</button>
+                    <button aria-label="Matrix Determinant">matrix determinant</button>
+                    <button aria-label="Matrix Inverse">matrix inverse</button>
+                    <button aria-label="Transpose">transpose</button>
+                    <button aria-label="Eigenvalues">eigenvalues</button>
+                    <button aria-label="Eigenvectors">eigenvectors</button>
+                    <button aria-label="Singular Value Decomposition">singular value decomposition</button>
+                    <button aria-label="QR Decomposition">QR decomposition</button>
+                    <button aria-label="LU Decomposition">LU decomposition</button>
+                    <button aria-label="Cholesky Decomposition">cholesky decomposition</button>
+                    <button aria-label="Jordan Canonical Form">Jordan canonical form</button>
+                    <button aria-label="Eigendecomposition">eigendecomposition</button>
+                </div>
+            </section>
+
+            <section id="math-symbols">
+                <div class="button-container">
+                    <button class="math-button" aria-label="Alpha">α</button>
+                    <button class="math-button" aria-label="Beta">β</button>
+                    <button class="math-button" aria-label="Gamma">γ</button>
+                    <button class="math-button" aria-label="Delta">δ</button>
+                    <button class="math-button" aria-label="Epsilon">ε</button>
+                    <button class="math-button" aria-label="Zeta">ζ</button>
+                    <button class="math-button" aria-label="Eta">η</button>
+                    <button class="math-button" aria-label="Theta">θ</button>
+                    <button class="math-button" aria-label="Iota">ι</button>
+                    <button class="math-button" aria-label="Kappa">κ</button>
+                    <button class="math-button" aria-label="Lambda">λ</button>
+                    <button class="math-button" aria-label="Mu">μ</button>
+                    <button class="math-button" aria-label="Nu">ν</button>
+                    <button class="math-button" aria-label="Xi">ξ</button>
+                    <button class="math-button" aria-label="Omicron">ο</button>
+                    <button class="math-button" aria-label="Pi">π</button>
+                </div>
+            </section>
+
+            <section id="characters">
+                <div class="button-container">
+                    <button value="a" aria-label="Character a">a</button>
+                    <button value="b" aria-label="Character b">b</button>
+                    <button value="c" aria-label="Character c">c</button>
+                    <button value="d" aria-label="Character d">d</button>
+                    <button value="e" aria-label="Character e">e</button>
+                    <button value="f" aria-label="Character f">f</button>
+                    <button value="g" aria-label="Character g">g</button>
+                    <button value="h" aria-label="Character h">h</button>
+                    <button value="i" aria-label="Character i">i</button>
+                    <button value="j" aria-label="Character j">j</button>
+                    <button value="k" aria-label="Character k">k</button>
+                    <button value="l" aria-label="Character l">l</button>
+                    <button value="m" aria-label="Character m">m</button>
+                    <button value="n" aria-label="Character n">n</button>
+                    <button value="o" aria-label="Character o">o</button>
+                    <button value="p" aria-label="Character p">p</button>
+                    <button value="q" aria-label="Character q">q</button>
+                    <button value="r" aria-label="Character r">r</button>
+                    <button value="s" aria-label="Character s">s</button>
+                    <button value="t" aria-label="Character t">t</button>
+                    <button value="u" aria-label="Character u">u</button>
+                    <button value="v" aria-label="Character v">v</button>
+                    <button value="w" aria-label="Character w">w</button>
+                    <button value="x" aria-label="Character x">x</button>
+                    <button value="y" aria-label="Character y">y</button>
+                    <button value="z" aria-label="Character z">z</button>
+                </div>
+            </section>
+        </div>
     </div>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
