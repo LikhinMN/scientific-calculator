@@ -1,5 +1,4 @@
 #nav{
-  height: 20vh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -7,6 +6,9 @@
   font-size: 18px;
   font-weight: 500;
   padding: 10px 0;
+  z-index: 100;
+  background-color:  #ffce32;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .nav-links{
   display: flex;
