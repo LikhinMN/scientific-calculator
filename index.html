@@ -3,52 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MathVector</title>
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/nav.css" />
-    <link rel="stylesheet" href="./styles/mediaquerries.css">
+    <link rel="stylesheet" href="./styles/mediaqueries.css">
+    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-CODE.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <section id="nav">
-      <div class="navigation">
-        <ul>
-          <li class="nav-links">
-            <img src="./image/download.png" class="logo" />
-          </li>
-        </ul>
-        <ul>
-          <li class="nav-links"><a href="#hero">Home</a></li>
 
-          <li class="nav-links"><a href="#calculate">Calculate</a></li>
+    <!-- ✅ Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="./image/download.png" class="logo" alt="MathVector Logo" />
+      </div>
 
+      <div class="nav-right">
+        <ul>
+          <li>Home</li>
+          <li>Calculate</li>
         </ul>
+      </div>
+    </nav>
+
+    <!-- ✅ Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1>Math Simplified with <span>Precision</span></h1>
+        <p>Instantly solve mathematical problems with accuracy. Elevate your skills with MathVector.</p>
+        <button class="cta-button">Get Started</button>
       </div>
     </section>
 
-    <section class="hero" id="hero">
-       <div class="title-conatiner">Simplifying Your Path to <span>Precision.</span></div>
-       <div class="discription"><p>solving mathematical problems, provides accurate results and a seamless experience. Unlock the precision with MathVector and elevate your mathematical prowess.</p></div>
-       <div class="button-container"><button>Get Started</button></div>
+    <!-- ✅ Calculation Section (Modern Grid Layout) -->
+    <section class="calculate">
+      <h2>Explore Our Math Tools</h2>
+      <div class="calculate-grid">
+
     </section>
 
-    <section class="calculate" id="calculate">
-        <div class="calculate-title">
-          <h2>Calculate</h2>
-        </div>
-        <div class="calculate-conatiner">
-        </div>
-    </section>
-    <section class="footer">
-      <div class="footer-content">
-        <img src="./image/download (1).png" >
-        <ul class="footer-links">
-          <li class="nav-links"><a href="#hero">Home</a></li>
+    <!-- ✅ Footer -->
+    <footer>
+      <p>&copy; 2025 MathVector. All Rights Reserved.</p>
+    </footer>
 
-        <li class="nav-links"><a href="#calculate">Calculate</a></li>
-        </ul>
-        <p>&copy; 2025 MathVector. All rights reserved.</p>
-      </div>
-    </section>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>

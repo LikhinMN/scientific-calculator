@@ -1,7 +1,7 @@
-const cardgrid = document.querySelector('.calculate-conatiner');  
-const calculate = [
+const cardgrid = document.querySelector(".calculate-grid");
+export const calculate = [
   {
-    title: 'Basic',
+    title: "Basic",
     operations: [
       "Addition",
       "Subtraction",
@@ -12,22 +12,22 @@ const calculate = [
       "Exponentiation",
       "Logarithm",
       "Factorial",
-      "Square"
-    ]
+      "Square",
+    ],
   },
   {
-    title: 'Trigonometry',
+    title: "Trigonometry",
     operations: [
       "Sine",
       "Cosine",
       "Tangent",
       "Cosecant",
       "Secant",
-      "Cotangent"
-    ]
+      "Cotangent",
+    ],
   },
   {
-    title: 'Statistics',
+    title: "Statistics",
     operations: [
       "Mean",
       "Median",
@@ -36,11 +36,11 @@ const calculate = [
       "Standard Deviation",
       "Variance",
       "Sum",
-      "Product"
-    ]
+      "Product",
+    ],
   },
   {
-    title: 'Matrix',
+    title: "Matrix",
     operations: [
       "Addition",
       "Subtraction",
@@ -50,11 +50,11 @@ const calculate = [
       "Determinant",
       "Inverse",
       "Eigenvalues",
-      "Eigenvectors"
-    ]
+      "Eigenvectors",
+    ],
   },
   {
-    title: 'Algebra',
+    title: "Algebra",
     operations: [
       "Solving Linear Equations",
       "Solving Quadratic Equations",
@@ -64,11 +64,11 @@ const calculate = [
       "Rational Exponents",
       "Solving Systems of Equations",
       "Solving Inequalities",
-      "Evaluating Functions"
-    ]
+      "Evaluating Functions",
+    ],
   },
   {
-    title: 'Calculus',
+    title: "Calculus",
     operations: [
       "Limits",
       "Derivatives",
@@ -83,11 +83,11 @@ const calculate = [
       "Vector Calculus",
       "Gradient",
       "Divergence",
-      "Curl"
-    ]
+      "Curl",
+    ],
   },
   {
-    title: 'Number Systems',
+    title: "Number Systems",
     operations: [
       "Binary to Decimal",
       "Decimal to Binary",
@@ -100,23 +100,22 @@ const calculate = [
       "Decimal to Hexadecimal",
       "Hexadecimal to Decimal",
       "Octal to Hexadecimal",
-      "Hexadecimal to Octal"
-    ]
-  }
+      "Hexadecimal to Octal",
+    ],
+  },
 ];
 
-let cardHTML = '';
+let cardHTML = "";
 calculate.forEach((card) => {
-  cardHTML += `
-    <div class="card">
-      <div class="card-title">${card.title}</div>
-      <div class="card-details">
-        <ul>
-          ${card.operations.map(op => `<li>${op}</li>`).join('')}
-        </ul>
-      </div>
-      <div class="card-link"><img src="./image/link-square-02-solid-standard.svg" alt=""></div>
+  cardHTML += `  <div class="calc-card">
+    <div class="card-title">${card.title}</div>
+    <div class="card-details">
+      <ul>
+        ${card.operations.map((op) => `<li>${op}</li>`).join("")}
+      </ul>
     </div>
+      <div class="card-link"><img src="./image/link-square-02-solid-standard.svg" alt=""></div> 
+</div>
   `;
 });
 
