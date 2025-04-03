@@ -37,9 +37,22 @@ body {
   font-size: 18px;
   gap: 10px;
   font-weight: 500;
+  cursor:pointer;
 }
 .topics-container .image{
 display: flex;
 justify-content: center;
 align-items: center;
+}
+.topic-operations ul{
+  list-style: none;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.operationss{
+  display: none;
+}
+.operationss.active{
+  display: block;
 }
